@@ -1,17 +1,16 @@
-*****************Project*********************
+[steps to run.webm](https://github.com/KartikeyBartwal/Hate-Speech-Detection-using-Natural-Language-Processing/assets/98084657/72740adb-51b8-4058-95c2-27caef14cd4c)# Project
 
-The project aims to use machine learning to classify text messages in one of the 3 categories:
+Created a model to classify text messages in one of the 3 categories:
 1) Hate speech and offensive
 2) Safe speech
 
 
-
-******************About the Dataset**************************
+## About the Dataset
 
 The dataset utilizes Twitter data and was employed for researching hate speech detection. The text within this dataset is classified as hate speech, offensive language, or neither. It's important to note that, due to the nature of the study, this dataset contains text that may be considered racist, sexist, homophobic, or generally offensive.
 
 
-columns:
+## Data features:
 1) Count: Total number of people who voted for this
 2) hate_speech: Number of people who voted for the tweet to be a hate speech
 3) offensive_language: number of people who voted for the tweet to be an offensive_language
@@ -22,7 +21,7 @@ columns:
     2 -> Neither
     
     
-***************** Machine Learning Techniques Applied **************
+## Machine Learning Techniques Applied 
 1) Natural Langugae Processing
 2) Feature engineering: tokenization, count vectorization, data splitting, text formatting using basic data cleaning tehniques using the nltk library
 3) Random forest regressor algorithm to train the machine on the training data
