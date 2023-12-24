@@ -1,0 +1,11 @@
+nltk
+stopwords
+scikit-learn
+numpy
+pandas
+matplotlib
+seaborn
+keras
+tensorflow
+Tokenizer
+sequence
