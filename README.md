@@ -3,6 +3,8 @@
 Created a model to classify text messages in one of the 3 categories:
 1) Hate speech and offensive
 2) Safe speech
+   
+file:///home/kartikey/Videos/Screencasts/steps%20to%20run.webm
 
 
 ## About the Dataset
