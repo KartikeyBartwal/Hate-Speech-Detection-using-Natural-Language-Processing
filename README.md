@@ -1,4 +1,4 @@
-[steps to run.webm](https://github.com/KartikeyBartwal/Hate-Speech-Detection-using-Natural-Language-Processing/assets/98084657/72740adb-51b8-4058-95c2-27caef14cd4c)# Project
+# Project
 
 Created a model to classify text messages in one of the 3 categories:
 1) Hate speech and offensive
