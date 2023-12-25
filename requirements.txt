@@ -11,3 +11,4 @@ Tokenizer
 sequence
 flask
 flask-cors
+gunicorn
