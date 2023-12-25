@@ -5,163 +5,171 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hate Speech Checker</title>
   <style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .background {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #FFA07A, #87CEFA);
-    animation: gradientAnimation 10s ease infinite alternate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content {
-    text-align: center;
-  }
-  #textInput {
-    width: 400px;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-}
-.title-container {
-    text-align: center;
-    margin-top: 50px; /* Adjust margin as needed */
+    /* General Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
 }
 
-/* Animation */
+/* Header Styling */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #87CEFA;
+}
+
+/* Main Content Styling */
+main {
+  height: calc(100vh - 120px); /* Adjust for footer height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #FFA07A, #87CEFA);
+  animation: gradientAnimation 10s ease infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+/* Title Container Styling */
+.title-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Title Animation */
 .title-animation {
-    display: inline-block;
-    position: relative;
-    animation: move-and-gleam 3s ease-in-out infinite;
+  display: inline-block;
+  position: relative;
+  animation: move-and-gleam 3s ease-in-out infinite;
 }
 
 @keyframes move-and-gleam {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(100%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 0;
-        filter: brightness(200%);
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+    filter: brightness(200%);
+  }
 }
+
+/* Result Text Styling */
 #result_text {
   font-family: 'Arial', sans-serif;
   font-size: 40px;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #333;
   /* Animation */
-  animation: fadeInOut 3s ease-in-out infinite alternate; /* Example animation */
+  animation: fadeInOut 3s ease-in-out infinite alternate;
 }
 
-    /* Keyframes for the animation */
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
+/* Input Styling */
 input[type="text"] {
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
   width: 300px;
   display: block;
   margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
 }
-  
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #87CEFA;
+}
+
+#textInput{
+  width: 300px;
+  height: 70px;
+}
+
+/* Button Styling */
 button {
-  width: 100px;
-  height: 80px;
+  width: 150px;
+  height: 50px;
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
   border: none;
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
-  margin: 20px auto; /* Adjust the margin as needed */
+  margin: 20px auto;
+  font-size: 16px;
 }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
+
+button:hover {
+  background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
     <div class="title-container">
       <h1 class="title-animation">Hate Speech - Safe Speech Filtering Model</h1>
   </div>
