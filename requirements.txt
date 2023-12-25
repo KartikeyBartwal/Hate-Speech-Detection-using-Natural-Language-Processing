@@ -9,3 +9,5 @@ keras
 tensorflow
 Tokenizer
 sequence
+flask
+flask-cors
